@@ -10,10 +10,11 @@ class ButtonPurple extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return InkWell(
-        onTap: () {
-          ScaffoldMessenger.of(context).showSnackBar(
+
+      onTap: () {
+        ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-                content: Text("Navegando"),
+                content: Text("Navegando")
             )
           );
         },
