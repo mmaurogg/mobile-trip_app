@@ -1,0 +1,167 @@
+Intalaciones 
+https://docs.flutter.dev/get-started/install
+---------
+Flutter
+-----------
+- Lenguaje de programacion de flutter dart
+- Absolutamente todo es un widget (Flutter es en esencia un Widget)
+- la forma en que se diseñan y se componen las interfaces es mediante la definición de widget tree (poner las caracteristicas)
+- Funciona con programación declarativa
+
+
+Composicion básica scaffold
+Scaffold(
+        appBar: ,
+        body: ,
+        bottomNavigationBar: ,
+        floatingActionButton: ,
+        floatingActionButtonLocation: ,
+        floatingActionButtonAnimator: ,
+      )
+
+
+---------
+Widget
+---------
+
+““En Flutter, casi todo es un widget””. Son los componentes elementales de la interfaz 
+de usuario de la aplicación.
+
+Desde estos se hace toda la estructura física del aplicativo.
+
+
+BASICOS (StatelessWidgets):
+-------------------------
+
+Los widgets básicos son el punto de partida con los que puedes comenzar a crear tus 
+propios widgets (compuestos o más complejos) en Flutter.
+
+Text: 
+representa un texto o cadena de caracteres. Admite diversos parámetros o 
+propiedades, además del texto literal que será mostrado. Podemos definirle estilos y 
+características de apariencia particulares.
+
+Row: 
+permite organizar y posicionar otros widgets hijos en forma de fila o renglón.
+
+Column: 
+permite organizar y posicionar otros widgets hijos en forma de columna.
+
+Stack: 
+permite apilar widgets hijos con respecto al eje Z (elevación) en la interfaz (sobrepone los elementos)
+
+Container: 
+es uno de los widgets más versátiles de Flutter y permite organizar otros 
+widgets como si fuera una caja o contenedor. Este widget es equivalente a los divs de 
+html y admiten atributos similares de apariencia.
+
+
+
+CON ESTADO (StatefulWidgets)
+----------------------------
+* Con los que el usuario tiene unainteraccion directa con la interfaz
+
+
+
+sintaxis
+-----
+archivos minuscula
+clase mayus
+
+
+Fuentes
+---------
+1. Se crea una carpeta de fonts (puede que esté en el assets)
+2. Se pueden descargar de google https://fonts.google.com
+3. se activa el uso archivo pubspec.yaml	
+	y agregar:
+  fonts:
+    #nombre para reconocer la fuente
+    - family: Lato
+    #declarar las fuentes a usar
+      fonts:
+        - asset: fonts/Lato-Regular.ttf
+
+
+Otros recursos
+----------------
+* cuando se agregan utilidades en assets (como una carpeta de imagenes)
+* se activa el uso archivo pubspec.yaml
+
+  assets:
+    - assets/pathImage
+
+
+
+
+Botones
+---------
+RaisedButton -> clasico
+FloatingActionButton -> boton redondo parte inferior
+FlatButton -> un area clicleable?
+IconButton 
+
+
+
+volver la barra superior transparente
+-----------------------------------
+https://platzi.com/clases/1386-flutter/16271-widget-imagen-decora-0/
+munuto 11:40
+
+
+
+------------------------
+Tipos de arquitectura
+------------------------
+View (UI Screen): 
+Contendrá toda la interacción con las vistas; podemos organizarla en screens y widgets.
+
+BLoC: 
+La capa de negocio estará contenida aquí, por ejemplo: registrarse a la aplicación, hacer login o hacer logout; toda vista que tenga una lógica de negocio deberá tener un componente BLoC.
+
+Repository: 
+Aquí se concentran las clases que se conectan con una fuente de datos; API, Endpoints, DataBase, etc.
+
+Data / Model: 
+Son nuestros modelos, los cuales nos ayudan a manejar los datos; PODO Plain Old Dart Object
+
+
+BLoC
+-----
+Busines Logic Components
+* es un patron de diseño que separa la logica del negocio de la interfaz
+* 
+
+
+crear clase
+ 
+
+https://docs.flutter.dev/get-started/test-drive?tab=androidstudio
+
+
+
+
+comandos
+crear widgets:
+stful -
+
+
+
+
+
+
+
+
+
+-------------
+	Mario velez - 
+
+
+carlos humberto nos cambio de plancha
+
+-------------
+
+
+
+
+
