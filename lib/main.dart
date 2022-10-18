@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:tripapp/User/bloc/block_user.dart';
 import 'package:tripapp/trip_app_cupertino.dart';
 import 'trip_app.dart';
+import 'package:tripapp/User/ui/screens/sign_in_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
+/*
 void main() {
   runApp(const MyApp());
 }
+
+ */
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(const MyApp());
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,15 +29,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home:
-      //TripApp(),
-      TripsAppCupertino(),
-      //const MyHomePage(title: 'Flutter Demo Home Page'),
+    return BlocProvider(
+        bloc: UserBloc(),
+        child: MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: SignInScreen(),
+          //home: TripsAppCupertino(),
+        )
     );
   }
 }
